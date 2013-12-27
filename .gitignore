@@ -3,3 +3,4 @@ sftp-config.json
 dev.josemenor.sublime-project
 dev.josemenor.sublime-workspace
 _workfiles/
+.sass-cache/

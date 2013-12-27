@@ -1,0 +1,119 @@
+/*@import 'vendor/normalize'; */
+@import 'vendor/bourbon/bourbon';
+@import 'grid-settings';
+@import 'vendor/neat/neat';
+
+/* ---------------------------
+        BASE STYLES
+------------------------------*/
+
+body {
+    font-family: 'Enriqueta', sans-serif;
+    font-size: 1.2em;
+    color: #820000;
+    background: #EEE;
+}
+
+a {
+    color: #E88B00;
+    text-decoration: none;
+}
+
+.logo {
+    @include fill-parent;
+    @include omega;
+    padding: em(20) 0 em(10) em(10);
+}
+
+nav {
+    @include row;
+    border-top: 4px double #820000;
+    border-bottom: 4px double #820000;    
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li a {
+    @include span-columns(6);
+    height: 2.5em;
+    text-align: center;
+    color: #820000;
+}
+
+nav ul li a:hover {
+    color: #E88B00;
+}
+
+.intro p {
+    @include span-columns(10);
+    @include shift(1);
+    letter-spacing: -0.5px;
+    line-height: 1.5em;
+    text-align: justify;    
+}
+
+.btn {
+    @include span-columns(10);
+    @include shift(1);
+    padding: em(15) 0;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: #E88B00;
+    background: #2D0A04;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #820000;
+    color: #FEC600;
+}
+
+.intro img {
+    display: none;
+}
+
+.content, aside, .contact {
+    @include span-columns(10);
+    @include shift(1);
+    @include omega;
+}
+
+footer {
+    @include span-columns(12);
+    border-top: 2px dashed #820000;
+    text-align: center;
+    font-size: .8em;
+}
+
+h1 {
+    font-size: 1.6em;
+    color: #2D0A04;
+    margin-bottom: 0;
+}
+
+article img {
+    max-width: 100%;
+}
+
+aside img {
+    width: 100%;
+    max-width: 120%;
+}
+
+.contact p {
+    margin-bottom: 0;
+}
+
+.contact img {
+    @include span-columns(2);
+    margin: em(20) em(12);
+}
+
+/* ---------------------------
+        MID SIZE STYLES
+------------------------------*/
+
