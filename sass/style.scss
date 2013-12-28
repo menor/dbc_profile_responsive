@@ -19,14 +19,25 @@ body {
     background: #EEE;
 }
 
+h1 {
+    font-size: 1.6em;
+    color: #2D0A04;
+    margin-bottom: 0;
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
 }
+
 a {
     color: #E88B00;
     text-decoration: none;
 }
+
+/* ---------------------------
+        Header
+------------------------------*/
 
 .logo {
     @include fill-parent;
@@ -54,6 +65,10 @@ a {
         }
 }
 
+/* ---------------------------
+        Navigation (could use some work)
+------------------------------*/
+
 nav {
     @include row;
     border-top: 4px double #820000;
@@ -67,12 +82,10 @@ nav {
         @include media(min-width $breakpoint3) {
             border-bottom: none;
         }
-
 }
 
 nav ul {
     padding: 0;
-    
 }
 
 nav ul li a{
@@ -89,13 +102,19 @@ nav ul li a{
             margin-right: 1em;
             text-align: left;
         }
+        @include media(min-width $breakpoint4) {
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
     }
-
-
 
 nav ul li a:hover {
     color: #E88B00;
 }
+
+/* ---------------------------
+            Intro
+------------------------------*/
 
 .intro p {
     @include span-columns(10);
@@ -140,6 +159,10 @@ nav ul li a:hover {
         }
 }
 
+/* ---------------------------
+        Main content
+------------------------------*/
+
 .content, aside, .contact {
     @include span-columns(10);
     @include shift(1);  
@@ -149,7 +172,6 @@ nav ul li a:hover {
     @include media(min-width $breakpoint2) {
             @include span-columns(5);
             @include shift(1);
-            
         }
 }
 
@@ -167,12 +189,6 @@ footer {
     border-top: 2px dashed #820000;
     text-align: center;
     font-size: .8em;
-}
-
-h1 {
-    font-size: 1.6em;
-    color: #2D0A04;
-    margin-bottom: 0;
 }
 
 article img {
@@ -194,12 +210,4 @@ aside img {
         @include media(min-width $breakpoint1) {
             @include span-columns(1.8);            
         }
-
 }
-
-/* ---------------------------
-        MID SIZE STYLES
-------------------------------*/
-
-
-
