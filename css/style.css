@@ -186,10 +186,10 @@ nav ul li a:hover {
   background-color: #820000;
   color: #FEC600; }
 
-.intro img {
+.intro img, .intro object {
   display: none; }
   @media screen and (min-width: 850px) {
-    .intro img {
+    .intro img, .intro object {
       float: left;
       display: block;
       margin-right: 2.35765%;
@@ -197,7 +197,7 @@ nav ul li a:hover {
       margin-right: 0;
       margin-left: 8.5298%;
       margin-top: -6.25em; }
-      .intro img:last-child {
+      .intro img:last-child, .intro object:last-child {
         margin-right: 0; } }
 
 .content, aside, .contact {

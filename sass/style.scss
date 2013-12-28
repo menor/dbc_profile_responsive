@@ -130,7 +130,7 @@ nav ul li a:hover {
     color: #FEC600;
 }
 
-.intro img {
+.intro img, .intro object {
     display: none;
     @include media(min-width $breakpoint3) {
             @include span-columns(3);
