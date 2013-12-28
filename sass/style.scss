@@ -3,6 +3,11 @@
 @import 'grid-settings';
 @import 'vendor/neat/neat';
 
+$breakpoint1: 520px;
+$breakpoint2: 666px;
+$breakpoint3: 850px;
+$breakpoint4: 1100px;
+
 /* ---------------------------
         BASE STYLES
 ------------------------------*/
@@ -14,6 +19,10 @@ body {
     background: #EEE;
 }
 
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 a {
     color: #E88B00;
     text-decoration: none;
@@ -23,24 +32,66 @@ a {
     @include fill-parent;
     @include omega;
     padding: em(20) 0 em(10) em(10);
+        @include media(min-width $breakpoint1) {
+            @include span-columns(10);
+            @include shift(1);
+            @include omega;
+            margin-bottom: 2em;
+        }
+        @include media(min-width $breakpoint2) {
+            @include span-columns(8);
+            margin-bottom: 2em;
+        }
+        @include media(min-width $breakpoint3) {
+            @include span-columns(6);
+            @include shift(0);
+            max-width: 40%;
+        }
+        @include media(min-width $breakpoint4) {
+            @include span-columns(6);
+            @include shift(1);
+            max-width: 40%;
+        }
 }
 
 nav {
     @include row;
     border-top: 4px double #820000;
-    border-bottom: 4px double #820000;    
+    border-bottom: 4px double #820000;
+        @include media(min-width $breakpoint1) {
+            border-top: none;
+        }
+        @include media(min-width $breakpoint2) {
+            padding-top: 1.5em;
+        }
+        @include media(min-width $breakpoint3) {
+            border-bottom: none;
+        }
+
 }
 
 nav ul {
     padding: 0;
+    
 }
 
-nav ul li a {
+nav ul li a{
     @include span-columns(6);
     height: 2.5em;
     text-align: center;
     color: #820000;
-}
+        @include media(min-width $breakpoint2) {
+            @include span-columns(3, block-collapse);
+            text-align: left;
+        }
+        @include media(min-width $breakpoint3) {
+            width: 50%;
+            margin-right: 1em;
+            text-align: left;
+        }
+    }
+
+
 
 nav ul li a:hover {
     color: #E88B00;
@@ -51,7 +102,10 @@ nav ul li a:hover {
     @include shift(1);
     letter-spacing: -0.5px;
     line-height: 1.5em;
-    text-align: justify;    
+    text-align: justify;
+    @include media(min-width $breakpoint3) {
+            @include span-columns(6);
+        }
 }
 
 .btn {
@@ -65,6 +119,10 @@ nav ul li a:hover {
     background: #2D0A04;
     border-radius: 10px;
     text-transform: uppercase;
+        @include media(min-width $breakpoint2) {
+            @include span-columns(8);
+            @include shift(2);
+        }
 }
 
 .btn:hover {
@@ -74,16 +132,38 @@ nav ul li a:hover {
 
 .intro img {
     display: none;
+    @include media(min-width $breakpoint3) {
+            @include span-columns(3);
+            @include omega;
+            @include shift(1);
+            margin-top: em(-100);
+        }
 }
 
 .content, aside, .contact {
     @include span-columns(10);
-    @include shift(1);
-    @include omega;
+    @include shift(1);  
+}
+
+.content {
+    @include media(min-width $breakpoint2) {
+            @include span-columns(5);
+            @include shift(1);
+            
+        }
+}
+
+aside, .contact {
+    @include media(min-width $breakpoint2) {
+            @include span-columns(4);
+            @include shift(1);
+            @include omega;
+    }
 }
 
 footer {
     @include span-columns(12);
+    margin-top: 1em;
     border-top: 2px dashed #820000;
     text-align: center;
     font-size: .8em;
@@ -111,9 +191,15 @@ aside img {
 .contact img {
     @include span-columns(2);
     margin: em(20) em(12);
+        @include media(min-width $breakpoint1) {
+            @include span-columns(1.8);            
+        }
+
 }
 
 /* ---------------------------
         MID SIZE STYLES
 ------------------------------*/
+
+
 
